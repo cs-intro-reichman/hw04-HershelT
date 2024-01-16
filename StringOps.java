@@ -72,7 +72,8 @@ public class StringOps {
                     else newString+=string.charAt(i);
                 }
                 else if (string.charAt(i)>96) {
-                    newString+=(char) (string.charAt(i)-32);
+                    if (first) newString += string.charAt(i);
+                    else newString+=(char) (string.charAt(i)-32);
                 }
             }
             else {
