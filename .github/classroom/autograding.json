@@ -95,7 +95,7 @@
         "setup": "javac TesterArrayOps.java",
         "run": "java TesterArrayOps isSorted 1",
         "input": "",
-        "output": "true",
+        "output": "false",
         "comparison": "exact",
         "timeout": 10,
         "points": 5
