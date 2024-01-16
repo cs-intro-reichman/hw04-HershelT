@@ -37,7 +37,7 @@ public class StringOps {
         for (int i = 0; i < strings.length(); i++){
             for (int j = 0;j<vowels.length;j++){
                 if (strings.charAt(i) == (char)(vowels[j] + 32)) {
-                    newString += strings.charAt(i);
+                    newString += (char) (strings.charAt(i)+32);
                     passes = true;
                     break;
                 }
@@ -74,12 +74,12 @@ public class StringOps {
                 else if (string.charAt(i)>96) {
                     newString+=(char) (string.charAt(i)-32);
                 }
-                first = false;
             }
             else {
                 if (string.charAt(i) < 97) newString+=(char) (string.charAt(i)+32);
                 else newString+= string.charAt(i);
             }
+            first = false;
         }
         return newString;
     }
