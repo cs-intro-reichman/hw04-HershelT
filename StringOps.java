@@ -24,7 +24,7 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-//        System.out.println(capVowelsLowRest("aeiouhhsdfsfshdAEIOU"));
+//        System.out.println(capVowelsLowRest("OOue two tHRee world"));
 //        System.out.println(camelCase("  I LIKE TO EAT APPLE AND BANNAS  "));
 //        System.out.println(Arrays.toString(allIndexOf("hello world", 'd')));
     }
@@ -36,13 +36,8 @@ public class StringOps {
         boolean passes = false;
         for (int i = 0; i < strings.length(); i++){
             for (int j = 0;j<vowels.length;j++){
-                if (strings.charAt(i) == (char)(vowels[j] + 32)) {
-                    newString += (char) (strings.charAt(i)+32);
-                    passes = true;
-                    break;
-                }
-                else if (strings.charAt(i) == vowels[j]){
-                    newString += (char) (strings.charAt(i) - 32);
+                if (strings.charAt(i) == vowels[j] || strings.charAt(i)+32 == vowels[j]){
+                    newString += (char) (vowels[j] - 32);
                     passes = true;
                     break;
                 }
